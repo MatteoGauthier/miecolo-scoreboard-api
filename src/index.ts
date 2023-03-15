@@ -34,8 +34,6 @@ app.post(
   async (c) => {
     const { email, name, score } = c.req.valid("json")
 
-    console.log('[SAVE SCORE] email: "%s", name: "%s", score: %d', email, name, score)
-
     await c.env.PLAYER_SCORE.put(email, String(score), {
       metadata: {
         name,
@@ -50,7 +48,6 @@ app.post(
 
 app.get("/leaderboard", async (c) => {
   const scoresList = (await c.env.PLAYER_SCORE.list<Metadata>({ limit: 50 })).keys
-  console.log('SCORE keys', scoresList)
   const leaderboard = scoresList
     .filter((score) => score.metadata)
     .sort((a, b) => b.metadata!.score - a.metadata!.score)
