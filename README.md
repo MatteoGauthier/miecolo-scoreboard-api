@@ -1,6 +1,6 @@
 # Miecolo Scoreboard API
 
-This is a simple API made with Cloudflare Worker and [Hono](https://hono.dev) to create a scoreboard for a game.
+This is a simple API to create a scoreboard for a game. It's made with Cloudflare Worker, using [Hono](https://hono.dev) as web framework and Cloudflare Worker KV as database.
 
 ## API Docs
 
