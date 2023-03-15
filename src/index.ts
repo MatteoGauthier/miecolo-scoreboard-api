@@ -22,7 +22,7 @@ type Metadata = {
 }
 
 app.post(
-  "/save",
+  "/save-score",
   zValidator(
     "json",
     z.object({
