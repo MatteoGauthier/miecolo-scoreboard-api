@@ -1,0 +1,5 @@
+name = "miecolo-scoreboard-api"
+compatibility_date = "2023-01-01"
+kv_namespaces = [
+  { binding = "PLAYER_SCORE", id = "511f170c676545d79799b4d3a5fe86aa", preview_id = "69f771c6f0c142a1bbd18dae721b11f1" },
+]
