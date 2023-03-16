@@ -2,6 +2,12 @@
 
 This is a simple API to create a scoreboard for a game. It's made with Cloudflare Worker, using [Hono](https://hono.dev) as web framework and Cloudflare Worker KV as database.
 
+## Base URL
+
+```
+https://miecolo-scoreboard-api.squale.workers.dev/
+```
+
 ## API Docs
 
 ### GET /leaderboard
