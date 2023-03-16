@@ -8,6 +8,31 @@ This is a simple API to create a scoreboard for a game. It's made with Cloudflar
 https://miecolo-scoreboard-api.squale.workers.dev/
 ```
 
+## Usage example
+
+```js
+const API_URL = "https://miecolo-scoreboard-api.squale.workers.dev"
+
+async function main() {
+  const captureScore = await fetch(`${API_URL}/save-score`, {
+    method: "POST",
+    body: JSON.stringify({
+      name: "ddddd",
+      email: "maxime@google.com",
+      score: 1000000,
+    }),
+  })
+  console.log(captureScore.status)
+  console.log(await captureScore.json())
+
+  const leaderboard = await fetch(`${API_URL}/leaderboard`)
+
+  console.log(await leaderboard.json())
+}
+
+main()
+```
+
 ## API Docs
 
 ### GET /leaderboard
