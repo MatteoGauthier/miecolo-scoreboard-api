@@ -8,6 +8,8 @@ type Env = {
   PLAYER_SCORE: KVNamespace
 }
 
+// @xxx response.clone() issue maybe caused by zValidatior
+
 const app = new Hono<{ Bindings: Env }>()
 app.use(
   "/*",
