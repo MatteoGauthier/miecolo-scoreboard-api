@@ -2,6 +2,7 @@ import { Hono } from "hono"
 import { cors } from "hono/cors"
 import { zValidator } from "@hono/zod-validator"
 import { z } from "zod"
+import { getLeaderBoard, Metadata } from "./lib/db"
 
 type Env = {
   PLAYER_SCORE: KVNamespace
@@ -14,12 +15,6 @@ app.use(
     origin: "*",
   })
 )
-
-type Metadata = {
-  name: string
-  email: string
-  score: number
-}
 
 app.post(
   "/save-score",
@@ -42,21 +37,14 @@ app.post(
       } satisfies Metadata,
     })
 
-    return c.json({ message: "Successfully saved score" })
+    const leaderboard = await getLeaderBoard(c.env.PLAYER_SCORE)
+
+    return c.json({ message: "Successfully saved score", leaderboard })
   }
 )
 
 app.get("/leaderboard", async (c) => {
-  const scoresList = (await c.env.PLAYER_SCORE.list<Metadata>({ limit: 50 })).keys
-  const leaderboard = scoresList
-    .filter((score) => score.metadata)
-    .sort((a, b) => b.metadata!.score - a.metadata!.score)
-    .map((score) => ({
-      name: score.metadata!.name,
-      email: score.metadata!.email,
-      score: score.metadata!.score,
-    }))
-
+  const leaderboard = await getLeaderBoard(c.env.PLAYER_SCORE)
   return c.json(leaderboard)
 })
 
