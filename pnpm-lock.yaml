@@ -2,22 +2,22 @@ lockfileVersion: 5.4
 
 specifiers:
   '@cloudflare/workers-types': ^4.20221111.1
-  '@hono/zod-validator': ^0.0.6
-  hono: ^3.0.2
+  '@hono/zod-validator': ^0.1.0
+  hono: ^3.1.0
   nanoid: ^4.0.1
-  typescript: ^4.9.5
+  typescript: ^5.0.2
   wrangler: ^2.7.1
   zod: ^3.21.4
 
 dependencies:
-  '@hono/zod-validator': 0.0.6_hono@3.0.5+zod@3.21.4
-  hono: 3.0.5
+  '@hono/zod-validator': 0.1.0_hono@3.1.0+zod@3.21.4
+  hono: 3.1.0
   nanoid: 4.0.1
   zod: 3.21.4
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230307.0
-  typescript: 4.9.5
+  typescript: 5.0.2
   wrangler: 2.12.3
 
 packages:
@@ -248,13 +248,13 @@ packages:
     dev: true
     optional: true
 
-  /@hono/zod-validator/0.0.6_hono@3.0.5+zod@3.21.4:
-    resolution: {integrity: sha512-K5XS5A19OHc1loqztcCVKvxejEvOBSnicwBk0hGA077SqzGq8/Bbi6dEgQ/7WaNQRPE6zqdqyU4mtwAonVZxlg==}
+  /@hono/zod-validator/0.1.0_hono@3.1.0+zod@3.21.4:
+    resolution: {integrity: sha512-40mKs7qo7E4gBJSvEBZZVx7OOZ36x1eZqZciC0Vf7xZuKWJZJsnHX7ABl1ZKfC6ejq+F5EkUu8O0ZGvsBptwPg==}
     peerDependencies:
       hono: 3.*
       zod: ^3.19.1
     dependencies:
-      hono: 3.0.5
+      hono: 3.1.0
       zod: 3.21.4
     dev: false
 
@@ -607,8 +607,8 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /hono/3.0.5:
-    resolution: {integrity: sha512-X/bNd7buFn+KLJPrdDENhHTZ1RSaemjXZDh9ABbSnY2KV+IzAHpdRT4Q1r6RHfvF5+l6xLp6OEX0j40Cs0GWGQ==}
+  /hono/3.1.0:
+    resolution: {integrity: sha512-5hVyzp3mrAjxRwy6Uj7su0pIISGTKVX2tE4YiYO81V3w1KoYZEmz3g6X6P9nRLQmaABDWXmnL9GqEzBhTAPeog==}
     engines: {node: '>=16.0.0'}
     dev: false
 
@@ -917,9 +917,9 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
